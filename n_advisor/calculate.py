@@ -52,7 +52,7 @@ def cal(rot, fpr, cpr, dis, fer):
 
         for j in range(len(xn)):
             if lx == "QP":  # quandratic-plateau
-		x0=B / (-2 * A)
+                x0 = B / (-2 * A)
                 if x0 >= MaxN:
                     x0 = MaxN
                 if xn[j] <= x0:
@@ -76,9 +76,9 @@ def cal(rot, fpr, cpr, dis, fer):
     Ns = yn.shape[1]  # number of sites
     MRTN_rate = xn[np.argmax(Yrtn, axis=0)]  # MRTN rate
 
-    YN=yn.mean(axis=1)
-    Y_mrtn=YN[np.argmax(Yrtn, axis=0)]#Crop yield at MRTN rate
-    PMY=Y_mrtn/max(YN) #% of Maximum Yield at MRTN Rate
+    YN = yn.mean(axis=1)
+    Y_mrtn = YN[np.argmax(Yrtn, axis=0)]  # Crop yield at MRTN rate
+    PMY = Y_mrtn / max(YN)  # % of Maximum Yield at MRTN Rate
 
     NRN = Yrtn[np.argmax(Yrtn, axis=0)]  # Net return to N at MRTN Rate
     Rg_min = min(xn[np.where(Yrtn >= NRN - 1)])  # Profitable N rate range
