@@ -67,6 +67,7 @@ def run(rot, fpr, cpr, dis, plot, fer, output, filename):
                 "En": En,
                 "Opy": Opy,
                 "MRTN_rate": MRTN_rate,
+                "PMY": PMY,
                 "Ns": Ns,
                 "xn": xn.tolist(),
                 "Yc": Yc.tolist(),
@@ -82,7 +83,7 @@ def run(rot, fpr, cpr, dis, plot, fer, output, filename):
             with open(filename, "w") as f:
                 f.write(results)
         else:
-            print(results, flush=True)
+            print(results)
     elif output == "plot":
         fig(plot, yn, En, Opy, cpr, fpr, Rg_min, Rg_max)
 

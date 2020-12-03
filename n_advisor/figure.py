@@ -12,7 +12,7 @@ def get_plot_data(yn, fpr, cpr):
     :param fpr: nitrogen fertilizer price $/lb N
     :return:
     """
-    xn = np.linspace(0, 250, 1000)
+    xn = np.linspace(0, 300, 1000)
     Yc = (yn.mean(axis=1) - yn.mean(axis=1)[0]) * cpr
     Yf = xn * fpr
     Yrtn = Yc - Yf
