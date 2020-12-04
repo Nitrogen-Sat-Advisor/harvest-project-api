@@ -15,10 +15,10 @@ def cal(rot, fpr, cpr, dis, fer):
                 12: central
                 13: southern Illinois
     :param fer: fertilizer category
-                1: Anhydrous Ammonia (82%)
-                2: UAN (28%)
-                3: UAN (32%)
-                4: UAN (45%)
+                0: Anhydrous Ammonia (82%)
+                1: UAN (28%)
+                2: UAN (32%)
+                3: UAN (45%)
     :return:
     :yn: all N-yield responses curve under selected districts and rotations
              (each column represent one N-yield response for one site in one year)
@@ -84,7 +84,7 @@ def cal(rot, fpr, cpr, dis, fer):
     Rg_min = min(xn[np.where(Yrtn >= NRN - 1)])  # Profitable N rate range
     Rg_max = max(xn[np.where(Yrtn >= NRN - 1)])  # Profitable N rate range
 
-    if fer == "Anhydrous Ammonia (82%)":
+    if fer == 0:
         nt = 0.82
     elif fer == 1:
         nt = 0.28

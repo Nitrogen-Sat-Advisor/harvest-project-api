@@ -33,10 +33,10 @@ from figure import get_plot_data
     type=int,
     help="""
         Fertilizer category:\n
-        \t1: Anhydrous Ammonia (82%)\n
-        \t2: UAN (28%)\n
-        \t3: UAN (32%)\n
-        \t4: UAN (45%)
+        \t0: Anhydrous Ammonia (82%)\n
+        \t1: UAN (28%)\n
+        \t2: UAN (32%)\n
+        \t3: UAN (45%)
         """,
 )
 @click.option("--output", default="std", help="std, json, plot")
