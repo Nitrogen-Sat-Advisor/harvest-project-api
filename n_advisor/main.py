@@ -68,6 +68,8 @@ def run(rot, fpr, cpr, dis, plot, fer, output, filename):
                 "Opy": Opy,
                 "MRTN_rate": MRTN_rate,
                 "PMY": PMY,
+                "FM": FM,
+                "FC": FC,
                 "Ns": Ns,
                 "xn": xn.tolist(),
                 "Yc": Yc.tolist(),
